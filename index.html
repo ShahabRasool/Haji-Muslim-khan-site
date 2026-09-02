@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haji Muslim Khan Travels — Mardan ⇌ Narowal &amp; Mata</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haji Muslim Khan Travels — Mardan ⇌ Narowal &amp; Mata</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap"
+      rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
   tailwind.config = {
     theme: {
       extend: {
@@ -32,7 +34,7 @@
     }
   }
 </script>
-<script type="text/tailwindcss">
+    <script type="text/tailwindcss">
   @layer base {
     body { @apply font-body text-ink; }
     h1 { @apply font-heading font-bold text-4xl md:text-5xl leading-tight tracking-tight; }
@@ -43,554 +45,1145 @@
     h6 { @apply font-heading font-medium text-sm uppercase tracking-wide; }
   }
 </script>
-</head>
-<body class="font-body text-ink bg-cream leading-relaxed scroll-smooth">
+  </head>
+  <body class="font-body text-ink bg-cream leading-relaxed scroll-smooth">
 
-<!-- ================= HEADER ================= -->
-<header class="sticky top-0 z-50 bg-navy text-white border-b-[3px] border-amber">
-  <div class="max-w-[1140px] mx-auto flex items-center justify-between gap-4 px-6 py-3.5">
-    <div class="flex items-center gap-2.5 font-heading text-[18px] font-semibold whitespace-nowrap">
-      <img src="./logocoaster.png" alt="Haji Muslim Khan Travels" class="w-9 h-9 flex-shrink-0">
-      Haji Muslim Khan Travels
-    </div>
-    <nav class="hidden nav:flex items-center gap-6">
-      <ul class="flex gap-6 list-none">
-        <li><a href="#routes" class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n" data-en="Route & Timings" data-ur="روٹ اور اوقات">Route &amp; Timings</a></li>
-    
-        <li><a href="#vehicle" class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n" data-en="Fleet" data-ur="بیڑا">Fleet</a></li>
-        <li><a href="#about" class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n" data-en="About" data-ur="تعارف">About</a></li>
-        <li><a href="#team" class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n" data-en="Team" data-ur="ٹیم">Team</a></li>
-        <li><a href="#booking" class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n" data-en="Book Seat" data-ur="سیٹ بک کریں">Book Seat</a></li>
-      </ul>
-    </nav>
-    <div class="hidden nav:flex items-center gap-3.5">
-      <div class="lang-toggle flex items-center bg-white/10 rounded-full p-[3px] gap-0.5">
-        <button class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-amber text-navydeep" data-lang="en">EN</button>
-        <button class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-transparent text-[#B9C2D6]" data-lang="ur">اردو</button>
-      </div>
-      <a href="#booking" class="bg-amber hover:bg-[#c9943c] text-navydeep font-semibold text-sm px-[18px] py-[9px] rounded whitespace-nowrap i18n" data-en="Book on WhatsApp" data-ur="واٹس ایپ پر بک کریں">Book on WhatsApp</a>
-    </div>
-    <button id="hamburgerBtn" class="nav:hidden flex flex-col justify-center gap-[5px] w-9 h-9 bg-transparent border-none cursor-pointer flex-shrink-0" aria-label="Menu">
-      <span class="block w-6 h-0.5 bg-white rounded"></span>
-      <span class="block w-6 h-0.5 bg-white rounded"></span>
-      <span class="block w-6 h-0.5 bg-white rounded"></span>
-    </button>
-  </div>
-</header>
-
-<!-- Mobile off-canvas menu -->
-<div id="scrim" class="hidden fixed inset-0 bg-black/50 z-[55]"></div>
-<div id="mobilePanel" class="fixed top-0 right-0 bottom-0 w-[min(320px,84vw)] bg-navydeep z-[60] p-6 flex flex-col gap-1.5 translate-x-full transition-transform duration-300 ease-out shadow-2xl">
-  <div class="flex justify-between items-center mb-5">
-    <div class="flex items-center gap-2.5 font-heading text-[18px] font-semibold">
-      <img src="./logocoaster.png" alt="Haji Muslim Khan Travels" class="w-9 h-9">
-      Menu
-    </div>
-    <button id="mobileClose" class="bg-none border-none text-white text-[26px] leading-none cursor-pointer">×</button>
-  </div>
-  <a href="#routes" class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n" data-en="Route & Timings" data-ur="روٹ اور اوقات">Route &amp; Timings</a>
-  <a href="#vehicle" class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n" data-en="Fleet" data-ur="بیڑا">Fleet</a>
-  <a href="#about" class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n" data-en="About" data-ur="تعارف">About</a>
-  <a href="#team" class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n" data-en="Team" data-ur="ٹیم">Team</a>
-  <a href="#booking" class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n" data-en="Book Seat" data-ur="سیٹ بک کریں">Book Seat</a>
-  <a href="#booking" class="mobile-link bg-amber text-navydeep font-semibold text-sm px-[18px] py-3 rounded text-center mt-3.5 i18n" data-en="Book on WhatsApp" data-ur="واٹس ایپ پر بک کریں">Book on WhatsApp</a>
-  <div class="lang-toggle flex items-center bg-white/10 rounded-full p-[3px] gap-0.5 mt-3.5 self-start">
-    <button class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-amber text-navydeep" data-lang="en">EN</button>
-    <button class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-transparent text-[#B9C2D6]" data-lang="ur">اردو</button>
-  </div>
-</div>
-
-<!-- ================= HERO ================= -->
-<section class="relative overflow-hidden text-white bg-cover bg-left min-h-[560px] flex items-center" style="background-image:url('./images/HajiMuslimkhantravel/coaster.png')">
-  <div class="absolute inset-0 bg-gradient-to-l from-navydeep/95 via-navy/80 to-navydeep/30"></div>
-  <div class="max-w-[1140px] mx-auto px-6 py-20 relative z-10">
-    <div class=" ">
-      <div class="text-sky text-sm font-semibold mb-3.5 i18n" data-en="PAKISTAN'S TRUSTED MARDAN SHUTTLE SERVICE" data-ur="پاکستان کی معتبر مردان شٹل سروس">PAKISTAN'S TRUSTED MARDAN SHUTTLE SERVICE</div>
-      <h1 class="font-heading text-[30px] nav:text-[42px] xl:text-[58px] font-semibold leading-tight mb-4">
-        <span class="i18n" data-en="Travel in Comfort. " data-ur="آرام دہ سفر۔ ">Travel in Comfort. </span><span class="text-amber i18n" data-en="Arrive on Time. Every Time." data-ur="وقت پر پہنچیں، ہر بار۔">Arrive on Time. Every Time.</span>
-      </h1>
-      <div class="flex items-center gap-2.5 flex-wrap mb-4">
-        <span class="bg-white/10 border border-amber/40 text-white font-heading text-sm font-semibold px-3.5 py-1.5 rounded-full">Mardan</span>
-        <span class="text-sky text-[15px]">⇌</span>
-        <span class="bg-white/10 border border-amber/40 text-white font-heading text-sm font-semibold px-3.5 py-1.5 rounded-full">Narowal</span>
-        <span class="text-[#8291AE] text-[13px] font-semibold i18n" data-en="&amp;" data-ur="اور">&amp;</span>
-        <span class="bg-white/10 border border-amber/40 text-white font-heading text-sm font-semibold px-3.5 py-1.5 rounded-full">Mata</span>
-      </div>
-      <p class="text-[#DCE3F0] text-base max-w-[480px] mb-7 i18n" data-en="Two daily services from Mardan — to Narowal and to Mata. Book your seat directly on WhatsApp, under the personal supervision of Haji Muslim Khan." data-ur="مردان سے دو روزانہ سروسز — نارووال اور متہ کے لیے۔ اپنی سیٹ براہ راست واٹس ایپ پر بک کروائیں، حاجی مسلم خان کی ذاتی نگرانی میں۔">Two daily services from Mardan — to Narowal and to Mata. Book your seat directly on WhatsApp, under the personal supervision of Haji Muslim Khan.</p>
-      <div class="flex gap-3.5 flex-wrap">
-        <a href="#booking" class="inline-flex items-center gap-2 px-6 py-3 rounded font-semibold text-[15px] bg-amber hover:bg-[#c9943c] text-navydeep i18n" data-en="Book Your Seat" data-ur="اپنی سیٹ بک کریں">Book Your Seat</a>
-        <a href="#routes" class="inline-flex items-center gap-2 px-6 py-3 rounded font-semibold text-[15px] border border-white/35 hover:border-amber hover:text-amber text-white i18n" data-en="View Route & Timings" data-ur="روٹ اور اوقات دیکھیں">View Route &amp; Timings</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Quick booking bar -->
-<div class="max-w-[1140px] mx-auto px-6 -mt-14 relative z-10">
-  <div class="bg-white rounded-[10px] shadow-[0_18px_40px_rgba(15,24,48,0.18)] px-6 py-5 grid grid-cols-2 md:grid-cols-[1fr_1fr_1fr_auto] gap-4 items-end">
-    <div>
-      <label class="block text-xs font-semibold text-[#8B8F97] uppercase tracking-wide mb-1.5 i18n" data-en="From" data-ur="روانگی از">From</label>
-      <div class="font-heading text-base text-navy font-medium">Mardan</div>
-    </div>
-    <div>
-      <label class="block text-xs font-semibold text-[#8B8F97] uppercase tracking-wide mb-1.5 i18n" data-en="To" data-ur="منزل">To</label>
-      <div class="font-heading text-base text-navy font-medium">Narowal</div>
-    </div>
-    <div>
-      <label class="block text-xs font-semibold text-[#8B8F97] uppercase tracking-wide mb-1.5 i18n" data-en="Next Departure" data-ur="اگلی روانگی">Next Departure</label>
-      <div class="font-heading text-base text-navy font-medium">7:45 AM</div>
-    </div>
-    <a href="#booking" class="col-span-2 md:col-span-1 text-center bg-navy hover:bg-navydeep text-white px-[22px] py-3 rounded-md font-semibold text-[14.5px] whitespace-nowrap i18n" data-en="Book Now →" data-ur="ابھی بک کریں →">Book Now →</a>
-  </div>
-</div>
-
-<!-- ================= FEATURES ================= -->
-<section class="bg-white pt-14 pb-5">
-  <div class="max-w-[1140px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
-    <div class="text-center px-2">
-      <div class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">✆</div>
-      <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n" data-en="Direct WhatsApp Booking" data-ur="براہ راست واٹس ایپ بکنگ">Direct WhatsApp Booking</h4>
-      <p class="text-[13px] text-[#6B6F76] i18n" data-en="Book directly with the owner — no agents involved." data-ur="کوئی ایجنٹ نہیں، براہ راست مالک سے رابطہ۔">Book directly with the owner.</p>
-    </div>
-    <div class="text-center px-2">
-      <div class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">⏱</div>
-      <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n" data-en="On-Time Departure" data-ur="وقت پر روانگی">On-Time Departure</h4>
-      <p class="text-[13px] text-[#6B6F76] i18n" data-en="Fixed daily schedule you can rely on." data-ur="ہر روز مقررہ وقت پر سفر۔">Fixed daily schedule.</p>
-    </div>
-    <div class="text-center px-2">
-      <div class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">🛡</div>
-      <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n" data-en="Safe & Trusted" data-ur="محفوظ اور قابلِ اعتماد">Safe &amp; Trusted</h4>
-      <p class="text-[13px] text-[#6B6F76] i18n" data-en="Operated under Haji Muslim Khan's supervision." data-ur="حاجی مسلم خان کی نگرانی میں۔">Under personal supervision.</p>
-    </div>
-    <div class="text-center px-2">
-      <div class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">🧳</div>
-      <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n" data-en="Luggage Space" data-ur="سامان کی گنجائش">Luggage Space</h4>
-      <p class="text-[13px] text-[#6B6F76] i18n" data-en="Roof rack for comfortable, hassle-free travel." data-ur="روف ریک کے ساتھ آرام دہ سفر۔">Roof rack included.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALLERY SLIDER ================= -->
-<section class="bg-cream py-16" id="gallery">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="max-w-[600px] mb-8">
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n" data-en="Our Coasters" data-ur="ہماری کوسٹرز">Our Coasters</h2>
-      <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n" data-en="A look at the coaches running both routes." data-ur="دونوں روٹس پر چلنے والی کوسٹرز کی ایک جھلک۔">A look at the coaches running both routes.</p>
-    </div>
-    <div id="heroSlider" class="relative rounded-[10px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.35)] aspect-[16/8] max-w-[820px] mx-auto">
-      <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700">
-        <img src="./images/HajiMuslimkhantravel/coaster.png" alt="Haji Muslim Khan Travels — Mardan to Narowal Coaster" class="w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/90 to-transparent px-5 pt-10 pb-4 text-white">
-          <div class="font-heading font-semibold text-[15px] text-amber i18n" data-en="Mardan ⇌ Narowal Coaster" data-ur="مردان ⇌ نارووال کوسٹر">Mardan ⇌ Narowal Coaster</div>
-          <div class="text-[12.5px] text-[#DCE3F0] mt-0.5 i18n" data-en="Spacious · AC · Roof Luggage Rack" data-ur="کشادہ · اے سی · روف لگیج ریک">Spacious · AC · Roof Luggage Rack</div>
+    <!-- ================= HEADER ================= -->
+    <header
+      class="sticky top-0 z-50 bg-navy text-white border-b-[3px] border-amber">
+      <div
+        class="max-w-[1140px] mx-auto flex items-center justify-between gap-4 px-6 py-3.5">
+        <div
+          class="flex items-center gap-2.5 font-heading text-[18px] font-semibold whitespace-nowrap">
+          <img src="./logocoaster.png" alt="Haji Muslim Khan Travels"
+            class="w-9 h-9 flex-shrink-0">
+          Haji Muslim Khan Travels
         </div>
-      </div>
-      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700">
-        <img src="./images/HajiMuslimkhantravel/Mata/WhatsApp Image 2026-08-16 at 2.34.51 PM.jpeg" alt="Haji Muslim Khan Travels — Mardan to Mata Coaster" class="w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/90 to-transparent px-5 pt-10 pb-4 text-white">
-          <div class="font-heading font-semibold text-[15px] text-amber i18n" data-en="Mardan ⇌ Mata Coaster" data-ur="مردان ⇌ متہ کوسٹر">Mardan ⇌ Mata Coaster</div>
-          <div class="text-[12.5px] text-[#DCE3F0] mt-0.5 i18n" data-en="Toyota Coaster Superlonge" data-ur="ٹویوٹا کوسٹر سپرلانگ">Toyota Coaster Superlonge</div>
-        </div>
-      </div>
-      <div class="absolute top-1/2 left-0 right-0 flex justify-between -translate-y-1/2 px-3 z-[5]">
-        <button id="heroPrev" class="w-[34px] h-[34px] rounded-full bg-navydeep/55 hover:bg-navydeep text-white border-none flex items-center justify-center cursor-pointer text-base" aria-label="Previous">‹</button>
-        <button id="heroNext" class="w-[34px] h-[34px] rounded-full bg-navydeep/55 hover:bg-navydeep text-white border-none flex items-center justify-center cursor-pointer text-base" aria-label="Next">›</button>
-      </div>
-      <div id="heroDots" class="absolute bottom-3 inset-x-0 flex justify-center gap-1.5 z-[5]">
-        <button class="hero-dot w-[9px] h-[9px] rounded-full bg-amber border-none p-0 cursor-pointer" data-i="0"></button>
-        <button class="hero-dot w-[9px] h-[9px] rounded-full bg-white/40 border-none p-0 cursor-pointer" data-i="1"></button>
-      </div>
-    </div>
-  </div>
-</section>
+        <nav class="hidden nav:flex items-center gap-6">
+          <ul class="flex gap-6 list-none">
+            <li><a href="#routes"
+                class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n"
+                data-en="Route & Timings" data-ur="روٹ اور اوقات">Route &amp;
+                Timings</a></li>
 
-<!-- ================= ROUTES OVERVIEW ================= -->
-<section class="bg-white py-16">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="max-w-[600px] mb-8">
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n" data-en="Our Routes" data-ur="ہمارے روٹس">Our Routes</h2>
-      <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n" data-en="Two daily services, both bookable directly on WhatsApp." data-ur="دو روزانہ سروسز، دونوں براہ راست واٹس ایپ پر بک ہو سکتی ہیں۔">Two daily services, both bookable directly on WhatsApp.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <a href="#routes" class="bg-cream border border-line rounded-[10px] p-6 flex flex-col gap-2.5 cursor-pointer transition-all duration-200 hover:shadow-[0_14px_30px_rgba(15,24,48,0.12)] hover:border-amber hover:-translate-y-0.5">
-        <div class="font-heading text-xl font-semibold text-navy">Mardan ⇌ Narowal</div>
-        <div class="text-sm text-sky font-semibold i18n" data-en="Departs 7:45 AM · Returns 5:30 PM" data-ur="روانگی صبح 7:45 · واپسی شام 5:30">Departs 7:45 AM · Returns 5:30 PM</div>
-        <div class="text-[13.5px] text-[#6B6F76] i18n" data-en="Adda: Shah & Afridi Adda, Mardan" data-ur="اڈہ: شاہ اینڈ آفریدی اڈہ، مردان">Adda: Shah &amp; Afridi Adda, Mardan</div>
-        <span class="mt-1.5 text-sm font-semibold text-amber i18n" data-en="View Full Schedule →" data-ur="مکمل شیڈول دیکھیں ←">View Full Schedule →</span>
-      </a>
-      <a href="#routes-mata" class="bg-cream border border-line rounded-[10px] p-6 flex flex-col gap-2.5 cursor-pointer transition-all duration-200 hover:shadow-[0_14px_30px_rgba(15,24,48,0.12)] hover:border-amber hover:-translate-y-0.5">
-        <div class="font-heading text-xl font-semibold text-navy">Mardan ⇌ Mata</div>
-        <div class="text-sm text-sky font-semibold i18n" data-en="Departs 7:45 AM · Returns 12:00 PM" data-ur="روانگی صبح 7:45 · واپسی دوپہر 12:00">Departs 7:45 AM · Returns 12:00 PM</div>
-        <div class="text-[13.5px] text-[#6B6F76] i18n" data-en="Adda: Charsadda Chowk, Mardan" data-ur="اڈہ: چارسدہ چوک، مردان">PK Adda: Charsadda Chowk, Mardan</div>
-        <span class="mt-1.5 text-sm font-semibold text-amber i18n" data-en="View Full Schedule →" data-ur="مکمل شیڈول دیکھیں ←">View Full Schedule →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= NAROWAL SCHEDULE ================= -->
-<section class="bg-cream py-16" id="routes">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="max-w-[600px] mb-8">
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n" data-en="Mardan ⇌ Narowal Schedule" data-ur="مردان ⇌ نارووال شیڈول">Mardan ⇌ Narowal Schedule</h2>
-      <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n" data-en="Complete Mardan to Narowal schedule and return, with every major GT Road stop." data-ur="مردان سے نارووال اور واپسی کا مکمل شیڈول، جی ٹی روڈ کے تمام بڑے سٹاپس کے ساتھ۔">Complete Mardan to Narowal schedule and return, with every major GT Road stop.</p>
-    </div>
-    <div class="inline-block bg-white border border-line rounded-md px-4 py-3 text-sm text-navy font-semibold mb-7 i18n" data-en="📍 Boarding Point: Shah & Afridi Adda, Mardan" data-ur="📍 اڈہ: شاہ اینڈ آفریدی اڈہ، مردان">📍 Adda: Shah &amp; Afridi Adda, Mardan</div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-      <div class="bg-white rounded-lg overflow-hidden border border-line">
-        <div class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Mardan → Narowal <span class="text-amber">7:45 AM</span></div>
-        <table class="w-full border-collapse">
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Mardan</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">7:45 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Nowshera</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:15 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Akora Khattak</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:30 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Attock</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:00 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Kamra</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:15 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Hasan Abdal</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:30 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Wah Taxila</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:45 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Rawalpindi</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">10:30 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujar Khan</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">11:45 AM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Dina</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">12:30 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Jhelum</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">12:45 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Sarai Alamgir</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:00 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Kharian</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:30 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Lala Musa</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:45 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujrat</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">2:15 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Wazirabad</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">2:30 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Sambrial</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">3:30 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Daska</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">3:30 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Pasrur</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">4:30 PM</td></tr>
-          <tr><td class="px-5 py-2.5 text-sm font-bold text-navy">Narowal</td><td class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">5:00 PM</td></tr>
-        </table>
-      </div>
-      <div class="bg-white rounded-lg overflow-hidden border border-line">
-        <div class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Narowal → Mardan <span class="text-amber">5:30 PM</span></div>
-        <table class="w-full border-collapse">
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Narowal</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">5:30 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Pasrur</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">6:00 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Daska</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">7:00 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Sambrial</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:00 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Wazirabad</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:30 PM</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujrat</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Lala Musa</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Kharian</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Sarai Alamgir</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Jhelum</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Dina</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujar Khan</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Rawalpindi</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Wah Taxila</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Hasan Abdal</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Kamra</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Attock</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Akora Khattak</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Nowshera</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">—</td></tr>
-          <tr><td class="px-5 py-2.5 text-sm font-bold text-navy">Mardan</td><td class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">—</td></tr>
-        </table>
-      </div>
-    </div>
-  
-</section>
-
-<!-- ================= MATA SCHEDULE ================= -->
-<section class="bg-white py-16" id="routes-mata">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="max-w-[600px] mb-8">
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-navy font-heading">Mardan ⇌ Mata</h2>
-      <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n" data-en="A second daily service, with its own boarding point and contact numbers." data-ur="ایک اور روزانہ سروس، اپنے الگ اڈے اور رابطہ نمبروں کے ساتھ۔">A second daily service, with its own boarding point and contact numbers.</p>
-    </div>
-    <div class="inline-block bg-cream border border-line rounded-md px-4 py-3 text-sm text-navy font-semibold mb-7 i18n" data-en="📍 Boarding Point: Charsadda Chowk, Mardan" data-ur="📍 اڈہ: چارسدہ چوک، مردان">📍 Adda: Charsadda Chowk, Mardan</div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-      <div class="bg-white rounded-lg overflow-hidden border border-line">
-        <div class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Mardan → Mata <span class="text-amber">7:45 AM</span></div>
-        <table class="w-full border-collapse">
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Mardan</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">7:45 AM</td></tr>
-          <tr><td class="px-5 py-2.5 text-sm font-bold text-navy">Mata</td><td class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">—</td></tr>
-        </table>
-      </div>
-      <div class="bg-white rounded-lg overflow-hidden border border-line">
-        <div class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Mata → Mardan <span class="text-amber">12:00 PM</span></div>
-        <table class="w-full border-collapse">
-          <tr class="odd:bg-white even:bg-[#FBFAF6]"><td class="px-5 py-2.5 text-sm font-medium border-b border-line">Mata</td><td class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">12:00 PM</td></tr>
-          <tr><td class="px-5 py-2.5 text-sm font-bold text-navy">Mardan</td><td class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">—</td></tr>
-        </table>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-      <div class="bg-cream border border-line rounded-md px-3.5 py-3">
-        <div class="text-xs text-[#8B8F97] font-semibold mb-0.5 i18n" data-en="Mata Route Contact" data-ur="متہ روٹ رابطہ">Mata Route Contact</div>
-        <div class="font-heading text-[15px] text-navy">0341-9328214</div>
-      </div>
-      <div class="bg-cream border border-line rounded-md px-3.5 py-3">
-        <div class="text-xs text-[#8B8F97] font-semibold mb-0.5 i18n" data-en="Mata Route Contact" data-ur="متہ روٹ رابطہ">Mata Route Contact</div>
-        <div class="font-heading text-[15px] text-navy">0302-8053230</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FLEET / COASTER ================= -->
-<section class="bg-cream py-16" id="vehicle">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="max-w-[600px] mb-8">
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n" data-en="Our Fleet" data-ur="ہمارا بیڑا">Our Fleet</h2>
-      <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n" data-en="Two comfortable, clean coaches — one for each route." data-ur="دو آرام دہ اور صاف ستھری کوسٹرز — ہر روٹ کے لیے ایک۔">Two comfortable, clean coaches — one for each route.</p>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <div class="bg-white rounded-lg overflow-hidden border border-line">
-        <img src="./images/HajiMuslimkhantravel/coaster.png" alt="Mardan to Narowal Coaster" class="w-full aspect-[4/3] object-cover">
-        <div class="p-6">
-          <h3 class="text-xl text-navy mb-1 font-semibold">Mardan ⇌ Narowal Coaster</h3>
-          <p class="text-[#5A5F68] text-sm mb-4 i18n" data-en="Spacious, AC coach with roof luggage rack." data-ur="کشادہ، اے سی کوسٹر روف لگیج ریک کے ساتھ۔">Spacious, AC coach with roof luggage rack.</p>
-          <ul class="list-none grid gap-2.5">
-            <li class="flex justify-between border-b border-line pb-2 text-sm"><span class="text-[#6B6F76] i18n" data-en="Vehicle" data-ur="گاڑی">Vehicle</span><span class="font-semibold text-navy">Toyota Coaster</span></li>
-            <li class="flex justify-between border-b border-line pb-2 text-sm"><span class="text-[#6B6F76] i18n" data-en="Boarding Point" data-ur="اڈہ">Boarding Point</span><span class="font-semibold text-navy">Shah &amp; Afridi Adda</span></li>
-           
+            <li><a href="#vehicle"
+                class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n"
+                data-en="Fleet" data-ur="بیڑا">Fleet</a></li>
+            <li><a href="#about"
+                class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n"
+                data-en="About" data-ur="تعارف">About</a></li>
+            <li><a href="#team"
+                class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n"
+                data-en="Team" data-ur="ٹیم">Team</a></li>
+            <li><a href="#booking"
+                class="text-[15px] font-medium opacity-90 hover:opacity-100 hover:text-amber i18n"
+                data-en="Book Seat" data-ur="سیٹ بک کریں">Book Seat</a></li>
           </ul>
+        </nav>
+        <div class="hidden nav:flex items-center gap-3.5">
+          <div
+            class="lang-toggle flex items-center bg-white/10 rounded-full p-[3px] gap-0.5">
+            <button
+              class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-amber text-navydeep"
+              data-lang="en">EN</button>
+            <button
+              class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-transparent text-[#B9C2D6]"
+              data-lang="ur">اردو</button>
+          </div>
+          <a href="#booking"
+            class="bg-amber hover:bg-[#c9943c] text-navydeep font-semibold text-sm px-[18px] py-[9px] rounded whitespace-nowrap i18n"
+            data-en="Book on WhatsApp" data-ur="واٹس ایپ پر بک کریں">Book on
+            WhatsApp</a>
+        </div>
+        <button id="hamburgerBtn"
+          class="nav:hidden flex flex-col justify-center gap-[5px] w-9 h-9 bg-transparent border-none cursor-pointer flex-shrink-0"
+          aria-label="Menu">
+          <span class="block w-6 h-0.5 bg-white rounded"></span>
+          <span class="block w-6 h-0.5 bg-white rounded"></span>
+          <span class="block w-6 h-0.5 bg-white rounded"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile off-canvas menu -->
+    <div id="scrim" class="hidden fixed inset-0 bg-black/50 z-[55]"></div>
+    <div id="mobilePanel"
+      class="fixed top-0 right-0 bottom-0 w-[min(320px,84vw)] bg-navydeep z-[60] p-6 flex flex-col gap-1.5 translate-x-full transition-transform duration-300 ease-out shadow-2xl">
+      <div class="flex justify-between items-center mb-5">
+        <div
+          class="flex items-center gap-2.5 font-heading text-[18px] font-semibold">
+          <img src="./logocoaster.png" alt="Haji Muslim Khan Travels"
+            class="w-9 h-9">
+          Menu
+        </div>
+        <button id="mobileClose"
+          class="bg-none border-none text-white text-[26px] leading-none cursor-pointer">×</button>
+      </div>
+      <a href="#routes"
+        class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n"
+        data-en="Route & Timings" data-ur="روٹ اور اوقات">Route &amp;
+        Timings</a>
+      <a href="#vehicle"
+        class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n"
+        data-en="Fleet" data-ur="بیڑا">Fleet</a>
+      <a href="#about"
+        class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n"
+        data-en="About" data-ur="تعارف">About</a>
+      <a href="#team"
+        class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n"
+        data-en="Team" data-ur="ٹیم">Team</a>
+      <a href="#booking"
+        class="mobile-link text-white text-base py-3 px-1 border-b border-[#263457] font-medium i18n"
+        data-en="Book Seat" data-ur="سیٹ بک کریں">Book Seat</a>
+      <a href="#booking"
+        class="mobile-link bg-amber text-navydeep font-semibold text-sm px-[18px] py-3 rounded text-center mt-3.5 i18n"
+        data-en="Book on WhatsApp" data-ur="واٹس ایپ پر بک کریں">Book on
+        WhatsApp</a>
+      <div
+        class="lang-toggle flex items-center bg-white/10 rounded-full p-[3px] gap-0.5 mt-3.5 self-start">
+        <button
+          class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-amber text-navydeep"
+          data-lang="en">EN</button>
+        <button
+          class="lang-btn text-[12.5px] font-semibold px-3 py-1.5 rounded-full border-none cursor-pointer bg-transparent text-[#B9C2D6]"
+          data-lang="ur">اردو</button>
+      </div>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <section
+      class="relative overflow-hidden text-white bg-cover bg-left min-h-[560px] flex items-center"
+      style="background-image:url('./images/HajiMuslimkhantravel/coaster.png')">
+      <div
+        class="absolute inset-0 bg-gradient-to-l from-navydeep/95 via-navy/80 to-navydeep/30"></div>
+      <div class="max-w-[1140px] mx-auto px-6 py-20 relative z-10">
+        <div class=" ">
+          <div class="text-sky text-sm font-semibold mb-3.5 i18n"
+            data-en="PAKISTAN'S TRUSTED MARDAN SHUTTLE SERVICE"
+            data-ur="پاکستان کی معتبر مردان شٹل سروس">PAKISTAN'S TRUSTED MARDAN
+            SHUTTLE SERVICE</div>
+          <h1
+            class="font-heading text-[30px] nav:text-[42px] xl:text-[58px] font-semibold leading-tight mb-4">
+            <span class="i18n" data-en="Travel in Comfort. "
+              data-ur="آرام دہ سفر۔ ">Travel in Comfort. </span><span
+              class="text-amber i18n" data-en="Arrive on Time. Every Time."
+              data-ur="وقت پر پہنچیں، ہر بار۔">Arrive on Time. Every
+              Time.</span>
+          </h1>
+          <div class="flex items-center gap-2.5 flex-wrap mb-4">
+            <span
+              class="bg-white/10 border border-amber/40 text-white font-heading text-sm font-semibold px-3.5 py-1.5 rounded-full">Mardan</span>
+            <span class="text-sky text-[15px]">⇌</span>
+            <span
+              class="bg-white/10 border border-amber/40 text-white font-heading text-sm font-semibold px-3.5 py-1.5 rounded-full">Narowal</span>
+            <span class="text-[#8291AE] text-[13px] font-semibold i18n"
+              data-en="&amp;" data-ur="اور">&amp;</span>
+            <span
+              class="bg-white/10 border border-amber/40 text-white font-heading text-sm font-semibold px-3.5 py-1.5 rounded-full">Mata</span>
+          </div>
+          <p class="text-[#DCE3F0] text-base max-w-[480px] mb-7 i18n"
+            data-en="Two daily services from Mardan — to Narowal and to Mata. Book your seat directly on WhatsApp, under the personal supervision of Haji Muslim Khan."
+            data-ur="مردان سے دو روزانہ سروسز — نارووال اور متہ کے لیے۔ اپنی سیٹ براہ راست واٹس ایپ پر بک کروائیں، حاجی مسلم خان کی ذاتی نگرانی میں۔">Two
+            daily services from Mardan — to Narowal and to Mata. Book your seat
+            directly on WhatsApp, under the personal supervision of Haji Muslim
+            Khan.</p>
+          <div class="flex gap-3.5 flex-wrap">
+            <a href="#booking"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded font-semibold text-[15px] bg-amber hover:bg-[#c9943c] text-navydeep i18n"
+              data-en="Book Your Seat" data-ur="اپنی سیٹ بک کریں">Book Your
+              Seat</a>
+            <a href="#routes"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded font-semibold text-[15px] border border-white/35 hover:border-amber hover:text-amber text-white i18n"
+              data-en="View Route & Timings" data-ur="روٹ اور اوقات دیکھیں">View
+              Route &amp; Timings</a>
+          </div>
         </div>
       </div>
-      <div class="bg-white rounded-lg overflow-hidden border border-line">
-        <img src="./images/HajiMuslimkhantravel/Mata/WhatsApp Image 2026-08-16 at 2.34.51 PM.jpeg" alt="Mardan to Mata Coaster" class="w-full aspect-[4/3] object-cover">
-        <div class="p-6">
-          <h3 class="text-xl text-navy mb-1 font-semibold">Mardan ⇌ Mata Coaster</h3>
-          <p class="text-[#5A5F68] text-sm mb-4 i18n" data-en="Toyota Coaster Superlonge with roof luggage rack." data-ur="ٹویوٹا کوسٹر سپرلانگ، روف لگیج ریک کے ساتھ۔">Toyota Coaster Superlonge with roof luggage rack.</p>
-          <ul class="list-none grid gap-2.5">
-            <li class="flex justify-between border-b border-line pb-2 text-sm"><span class="text-[#6B6F76] i18n" data-en="Vehicle" data-ur="گاڑی">Vehicle</span><span class="font-semibold text-navy">Toyota Coaster Superlonge</span></li>
-            <li class="flex justify-between border-b border-line pb-2 text-sm"><span class="text-[#6B6F76] i18n" data-en="Boarding Point" data-ur="اڈہ">Boarding Point</span><span class="font-semibold text-navy">Charsadda Chowk</span></li>
-          
+    </section>
+
+    <!-- Quick booking bar -->
+    <div class="max-w-[1140px] mx-auto px-6 -mt-14 relative z-10">
+      <div
+        class="bg-white rounded-[10px] shadow-[0_18px_40px_rgba(15,24,48,0.18)] px-6 py-5 grid grid-cols-2 md:grid-cols-[1fr_1fr_1fr_auto] gap-4 items-end">
+        <div>
+          <label
+            class="block text-xs font-semibold text-[#8B8F97] uppercase tracking-wide mb-1.5 i18n"
+            data-en="From" data-ur="روانگی از">From</label>
+          <div class="font-heading text-base text-navy font-medium">Mardan</div>
         </div>
+        <div>
+          <label
+            class="block text-xs font-semibold text-[#8B8F97] uppercase tracking-wide mb-1.5 i18n"
+            data-en="To" data-ur="منزل">To</label>
+          <div
+            class="font-heading text-base text-navy font-medium">Narowal</div>
+        </div>
+        <div>
+          <label
+            class="block text-xs font-semibold text-[#8B8F97] uppercase tracking-wide mb-1.5 i18n"
+            data-en="Next Departure" data-ur="اگلی روانگی">Next
+            Departure</label>
+          <div class="font-heading text-base text-navy font-medium">7:45
+            AM</div>
+        </div>
+        <a href="#booking"
+          class="col-span-2 md:col-span-1 text-center bg-navy hover:bg-navydeep text-white px-[22px] py-3 rounded-md font-semibold text-[14.5px] whitespace-nowrap i18n"
+          data-en="Book Now →" data-ur="ابھی بک کریں →">Book Now →</a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ================= ABOUT ================= -->
-<section class="bg-navy text-white py-16" id="about">
-  <div class="max-w-[1140px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-12 items-center">
-    <div class="rounded-[10px] overflow-hidden shadow-[0_16px_34px_rgba(0,0,0,0.35)]">
-      <img src="./images/HajiMuslimkhantravel/lala passportsize.jpeg" alt="Haji Muslim Khan" class="w-full">
-    </div>
-    <div>
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-white font-heading mb-5">Haji Muslim Khan Travels</h2>
-      <div class="mb-2">
-        <p class="text-[#C7CEDD] text-[15.5px] mb-4 i18n" data-en="Haji Muslim Khan Travels offers a reliable, trusted service between Mardan, Narowal, and Mata, personally overseen by Haji Muslim Khan." data-ur="حاجی مسلم خان ٹریولز حاجی مسلم خان کی ذاتی نگرانی میں مردان، نارووال اور متہ کے درمیان قابلِ اعتماد سفر کی سہولت فراہم کرتی ہے۔">Haji Muslim Khan Travels offers a reliable, trusted service between Mardan, Narowal, and Mata, personally overseen by Haji Muslim Khan.</p>
-        <p class="text-[#C7CEDD] text-[15.5px] mb-4 i18n" data-en="Every booking is confirmed directly on WhatsApp — no agents, no extra charges." data-ur="ہر بکنگ براہ راست واٹس ایپ پر کنفرم ہوتی ہے — کوئی ایجنٹ، کوئی اضافی چارجز نہیں۔">Every booking is confirmed directly on WhatsApp — no agents, no extra charges.</p>
+    <!-- ================= FEATURES ================= -->
+    <section class="bg-white pt-14 pb-5">
+      <div
+        class="max-w-[1140px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center px-2">
+          <div
+            class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">✆</div>
+          <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n"
+            data-en="Direct WhatsApp Booking"
+            data-ur="براہ راست واٹس ایپ بکنگ">Direct WhatsApp Booking</h4>
+          <p class="text-[13px] text-[#6B6F76] i18n"
+            data-en="Book directly with the owner — no agents involved."
+            data-ur="کوئی ایجنٹ نہیں، براہ راست مالک سے رابطہ۔">Book directly
+            with the owner.</p>
+        </div>
+        <div class="text-center px-2">
+          <div
+            class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">⏱</div>
+          <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n"
+            data-en="On-Time Departure" data-ur="وقت پر روانگی">On-Time
+            Departure</h4>
+          <p class="text-[13px] text-[#6B6F76] i18n"
+            data-en="Fixed daily schedule you can rely on."
+            data-ur="ہر روز مقررہ وقت پر سفر۔">Fixed daily schedule.</p>
+        </div>
+        <div class="text-center px-2">
+          <div
+            class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">🛡</div>
+          <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n"
+            data-en="Safe & Trusted" data-ur="محفوظ اور قابلِ اعتماد">Safe &amp;
+            Trusted</h4>
+          <p class="text-[13px] text-[#6B6F76] i18n"
+            data-en="Operated under Haji Muslim Khan's supervision."
+            data-ur="حاجی مسلم خان کی نگرانی میں۔">Under personal
+            supervision.</p>
+        </div>
+        <div class="text-center px-2">
+          <div
+            class="w-[52px] h-[52px] rounded-full bg-cream text-sky flex items-center justify-center mx-auto mb-3.5 text-[22px]">🧳</div>
+          <h4 class="text-[15px] text-navy mb-1.5 font-semibold i18n"
+            data-en="Luggage Space" data-ur="سامان کی گنجائش">Luggage Space</h4>
+          <p class="text-[13px] text-[#6B6F76] i18n"
+            data-en="Roof rack for comfortable, hassle-free travel."
+            data-ur="روف ریک کے ساتھ آرام دہ سفر۔">Roof rack included.</p>
+        </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
-        <div class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
-          <div class="text-[12.5px] text-sky font-semibold mb-1 i18n" data-en="MD / Owner — Haji Muslim Khan" data-ur="ایم ڈی / مالک — حاجی مسلم خان">MD / Owner — Haji Muslim Khan</div>
-          <div class="font-heading text-base text-white">0300-9051479</div>
+    </section>
+
+    <!-- ================= GALLERY SLIDER ================= -->
+    <section class="bg-cream py-16" id="gallery">
+      <div class="max-w-[1140px] mx-auto px-6">
+        <div class="max-w-[600px] mb-8">
+          <h2
+            class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n"
+            data-en="Our Coasters" data-ur="ہماری کوسٹرز">Our Coasters</h2>
+          <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n"
+            data-en="A look at the coaches running both routes."
+            data-ur="دونوں روٹس پر چلنے والی کوسٹرز کی ایک جھلک۔">A look at the
+            coaches running both routes.</p>
         </div>
-        <div class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
-          <div class="text-[12.5px] text-sky font-semibold mb-1 i18n" data-en="Owner — Alt. Number" data-ur="مالک — متبادل نمبر">Owner — Alt. Number</div>
-          <div class="font-heading text-base text-white">0347-9176898</div>
-        </div>
-        <div class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
-          <div class="text-[12.5px] text-sky font-semibold mb-1 i18n" data-en="Driver" data-ur="ڈرائیور">Owner</div>
-          <div class="font-heading text-base text-white i18n" data-en="To be confirmed" data-ur="مالک — حاجی مسلم خان">Haji Muslim Khan</div>
-        </div>
-        <div class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
-          <div class="text-[12.5px] text-sky font-semibold mb-1 i18n" data-en="Booking WhatsApp" data-ur="بکنگ واٹس ایپ">Booking WhatsApp</div>
-          <div class="font-heading text-base text-white">0300-9300113</div>
+        <div id="heroSlider"
+          class="relative rounded-[10px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.35)] aspect-[16/8] max-w-[820px] mx-auto">
+          <div
+            class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700">
+            <img src="./images/HajiMuslimkhantravel/coaster.png"
+              alt="Haji Muslim Khan Travels — Mardan to Narowal Coaster"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/90 to-transparent px-5 pt-10 pb-4 text-white">
+              <div
+                class="font-heading font-semibold text-[15px] text-amber i18n"
+                data-en="Mardan ⇌ Narowal Coaster"
+                data-ur="مردان ⇌ نارووال کوسٹر">Mardan ⇌ Narowal Coaster</div>
+              <div class="text-[12.5px] text-[#DCE3F0] mt-0.5 i18n"
+                data-en="Spacious · AC · Roof Luggage Rack"
+                data-ur="کشادہ · اے سی · روف لگیج ریک">Spacious · AC · Roof
+                Luggage Rack</div>
+            </div>
+          </div>
+          <div
+            class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700">
+            <img
+              src="./images/HajiMuslimkhantravel/Mata/WhatsApp Image 2026-08-16 at 2.34.51 PM.jpeg"
+              alt="Haji Muslim Khan Travels — Mardan to Mata Coaster"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/90 to-transparent px-5 pt-10 pb-4 text-white">
+              <div
+                class="font-heading font-semibold text-[15px] text-amber i18n"
+                data-en="Mardan ⇌ Mata Coaster"
+                data-ur="مردان ⇌ متہ کوسٹر">Mardan ⇌ Mata Coaster</div>
+              <div class="text-[12.5px] text-[#DCE3F0] mt-0.5 i18n"
+                data-en="Toyota Coaster Superlonge"
+                data-ur="ٹویوٹا کوسٹر سپرلانگ">Toyota Coaster Superlonge</div>
+            </div>
+          </div>
+          <div
+            class="absolute top-1/2 left-0 right-0 flex justify-between -translate-y-1/2 px-3 z-[5]">
+            <button id="heroPrev"
+              class="w-[34px] h-[34px] rounded-full bg-navydeep/55 hover:bg-navydeep text-white border-none flex items-center justify-center cursor-pointer text-base"
+              aria-label="Previous">‹</button>
+            <button id="heroNext"
+              class="w-[34px] h-[34px] rounded-full bg-navydeep/55 hover:bg-navydeep text-white border-none flex items-center justify-center cursor-pointer text-base"
+              aria-label="Next">›</button>
+          </div>
+          <div id="heroDots"
+            class="absolute bottom-3 inset-x-0 flex justify-center gap-1.5 z-[5]">
+            <button
+              class="hero-dot w-[9px] h-[9px] rounded-full bg-amber border-none p-0 cursor-pointer"
+              data-i="0"></button>
+            <button
+              class="hero-dot w-[9px] h-[9px] rounded-full bg-white/40 border-none p-0 cursor-pointer"
+              data-i="1"></button>
+          </div>
         </div>
       </div>
-      <div class="bg-navydeep border-l-[3px] border-amber rounded-r-lg px-6 py-5">
-        <div class="font-heading text-[34px] leading-none text-amber mb-1">"</div>
-        <p class="text-[#DCE3F0] text-[15px] italic mb-2.5 i18n" data-en="For over the years, I have made it my personal mission to ensure every passenger who boards our coaster reaches home safely and on time. Whether you're traveling to Narowal or Mata, you're not just a passenger to us — you're a guest under my care. I personally oversee every trip because trust, once earned, must never be broken." data-ur="برسوں سے میری ذاتی کوشش رہی ہے کہ ہماری کوسٹر میں سوار ہر مسافر بحفاظت اور وقت پر گھر پہنچے۔ چاہے آپ نارووال جا رہے ہوں یا متہ، آپ ہمارے لیے صرف مسافر نہیں بلکہ میری نگرانی میں ایک مہمان ہیں۔ میں ہر سفر کی ذاتی نگرانی کرتا ہوں کیونکہ جو اعتماد ایک بار حاصل ہو جائے، اسے کبھی ٹوٹنے نہیں دینا چاہیے۔">For over the 20 years, I have made it my personal mission to ensure every passenger who boards our coaster reaches home safely and on time. Whether you're traveling to Narowal or Mata, you're not just a passenger to us — you're a guest under my care. I personally oversee every trip because trust, once earned, must never be broken.</p>
-        <div class="text-amber font-heading text-[13.5px] font-semibold">— Haji Muslim Khan</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ================= TEAM ================= -->
-<section class="bg-white py-16" id="team">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="max-w-[600px] mb-8">
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n" data-en="Our Team" data-ur="ہماری ٹیم">Our Team</h2>
-      <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n" data-en="The people behind every trip — owner and route drivers." data-ur="ہر سفر کے پیچھے موجود لوگ — مالک اور روٹ ڈرائیورز۔">The people behind every trip — owner and route drivers.</p>
-    </div>
-    <div class="overflow-hidden">
-      <div id="teamTrack" class="flex transition-transform duration-700 ease-in-out">
-       <div class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
-  <!-- Added 'group' class to parent for hover targeting -->
-  <div class="group relative rounded-lg overflow-hidden aspect-square">
-    
-    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
-    <img src="./images/HajiMuslimkhantravel/lala passportsize.jpeg" alt="Haji Muslim Khan" class="w-full h-full object-cover object-[center_top]">
-    
-    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
-    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <div class="font-heading text-lg text-white font-semibold">Haji Muslim Khan</div>
-      <div class="text-amber text-sm font-semibold mt-1 i18n" data-en="Owner & Managing Director" data-ur="مالک اور ایم ڈی">Owner &amp; Managing Director</div>
-    </div>
-
-  </div>
-</div>
-       <div class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
-  <!-- Added 'group' class to parent for hover targeting -->
-  <div class="group relative rounded-lg overflow-hidden aspect-square">
-    
-    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
-    <img src="./images/HajiMuslimkhantravel/Murtaza.png" alt="Haji Muslim Khan" class="w-full h-full object-cover object-[center_top]">
-    
-    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
-    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <div class="font-heading text-lg text-white font-semibold">Murtaza Khan</div>
-      <div class="text-amber text-sm font-semibold mt-1 i18n" data-en="Owner & Managing Director" data-ur="مالک اور ایم ڈی">Murtaza </div>
-    </div>
-
-  </div>
-</div>
-       <div class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
-  <!-- Added 'group' class to parent for hover targeting -->
-  <div class="group relative rounded-lg overflow-hidden aspect-square">
-    
-    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
-    <img src="./images/HajiMuslimkhantravel/Mata/Khan.png" alt="Haji Muslim Khan" class="w-full h-full object-cover object-[center_top]">
-    
-    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
-    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <div class="font-heading text-lg text-white font-semibold"> Khan</div>
-      <div class="text-amber text-sm font-semibold mt-1 i18n" data-en="Owner & Managing Director" data-ur="مالک اور ایم ڈی">Driver &amp; Mardan To Matta</div>
-    </div>
-
-  </div>
-  </div>
-
-  <div class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
-  <!-- Added 'group' class to parent for hover targeting -->
-  <div class="group relative rounded-lg overflow-hidden aspect-square">
-    
-    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
-    <img src="./images/HajiMuslimkhantravel/Mata/Waris Khan.png" alt="Haji Muslim Khan" class="w-full h-full object-cover object-[center_top]">
-    
-    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
-    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <div class="font-heading text-lg text-white font-semibold">Waris Khan</div>
-      <div class="text-amber text-sm font-semibold mt-1 i18n" data-en="Owner & Managing Director" data-ur="مالک اور ایم ڈی">Mata &amp; Mardan</div>
-    </div>
-
-  </div>
-</div>
-
-    </div>
-    <div id="teamDots" class="flex justify-center gap-1.5 mt-5"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BOOKING ================= -->
-<section class="bg-cream py-16" id="booking">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="max-w-[600px] mx-auto mb-8 text-center">
-      <h2 class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n" data-en="Book Your Seat" data-ur="اپنی سیٹ بک کریں">Book Your Seat</h2>
-      <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n" data-en="Fill the form — a ready WhatsApp message will open directly." data-ur="فارم بھریں — تفصیلات کے ساتھ سیدھا واٹس ایپ میسج کھل جائے گا۔">Fill the form — a ready WhatsApp message will open directly.</p>
-    </div>
-    <div class="bg-white border border-line rounded-[10px] p-9 max-w-[640px] mx-auto">
-      <h3 class="text-xl text-navy mb-1.5 font-semibold i18n" data-en="Booking Details" data-ur="بکنگ کی تفصیلات">Booking Details</h3>
-      <p class="text-[#6B6F76] text-sm mb-6 i18n" data-en="Submitting opens WhatsApp with a ready-made message." data-ur="سبمٹ کرتے ہی واٹس ایپ تیار شدہ میسج کے ساتھ کھل جائے گا۔">Submitting opens WhatsApp with a ready-made message.</p>
-      <form id="bookingForm">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label for="name" class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n" data-en="Full Name" data-ur="پورا نام">Full Name</label>
-            <input type="text" id="name" required placeholder="Your name" class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
-          </div>
-          <div>
-            <label for="phone" class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n" data-en="Phone Number" data-ur="فون نمبر">Phone Number</label>
-            <input type="tel" id="phone" required placeholder="03XX-XXXXXXX" class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
-          </div>
-          <div>
-            <label for="from" class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n" data-en="From" data-ur="از">From</label>
-            <select id="from" class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
-              <option>Mardan</option>
-              <option>Narowal</option>
-              <option>Mata</option>
-            </select>
-          </div>
-          <div>
-            <label for="to" class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n" data-en="To" data-ur="تک">To</label>
-            <select id="to" class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
-              <option>Narowal</option>
-              <option>Mata</option>
-              <option>Mardan</option>
-            </select>
-          </div>
-          <div>
-            <label for="date" class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n" data-en="Travel Date" data-ur="سفر کی تاریخ">Travel Date</label>
-            <input type="date" id="date" class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
-          </div>
-          <div>
-            <label for="seats" class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n" data-en="Seats" data-ur="نشستیں">Seats</label>
-            <input type="number" id="seats" min="1" value="1" class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
-          </div>
-          <div class="sm:col-span-2">
-            <label for="message" class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n" data-en="Extra Note (optional)" data-ur="اضافی نوٹ (اختیاری)">Extra Note (optional)</label>
-            <textarea id="message" placeholder="Boarding point, luggage, or any other detail" class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink min-h-[70px] resize-y focus:outline-none focus:ring-2 focus:ring-sky"></textarea>
-          </div>
+    <!-- ================= ROUTES OVERVIEW ================= -->
+    <section class="bg-white py-16">
+      <div class="max-w-[1140px] mx-auto px-6">
+        <div class="max-w-[600px] mb-8">
+          <h2
+            class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n"
+            data-en="Our Routes" data-ur="ہمارے روٹس">Our Routes</h2>
+          <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n"
+            data-en="Two daily services, both bookable directly on WhatsApp."
+            data-ur="دو روزانہ سروسز، دونوں براہ راست واٹس ایپ پر بک ہو سکتی ہیں۔">Two
+            daily services, both bookable directly on WhatsApp.</p>
         </div>
-        <button type="submit" class="w-full justify-center mt-4 text-base px-6 py-3.5 rounded font-semibold bg-amber hover:bg-[#c9943c] text-navydeep flex items-center gap-2 i18n" data-en="Book on WhatsApp" data-ur="واٹس ایپ پر بک کریں">Book on WhatsApp</button>
-      </form>
-      <div class="text-[12.5px] text-[#8B8F97] mt-3 text-center i18n" data-en="Your message will go directly to 0300-9300113 on WhatsApp." data-ur="آپ کا میسج براہ راست 0300-9300113 پر واٹس ایپ کے ذریعے جائے گا۔">Your message will go directly to 0300-9300113 on WhatsApp.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="bg-navydeep text-[#8EA3C4] pt-10 pb-7">
-  <div class="max-w-[1140px] mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
-      <div>
-<div class="flex items-center gap-2.5 font-heading text-[18px] font-semibold whitespace-nowrap">
-      <img src="./logocoaster.png" alt="Haji Muslim Khan Travels" class="w-9 h-9 flex-shrink-0">
-      Haji Muslim Khan Travels
-    </div>        <p class="text-[13.5px] max-w-[280px] i18n" data-en="Daily services from Mardan to Narowal and Mardan to Mata." data-ur="روزانہ سروسز: مردان سے نارووال اور مردان سے متہ۔">Daily services from Mardan to Narowal and Mardan to Mata.</p>
-        <div class="flex gap-2.5 mt-4">
-          <a href="https://www.facebook.com/profile.php?id=61586655008805" class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="w-[17px] h-[17px]"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a href="#routes"
+            class="bg-cream border border-line rounded-[10px] p-6 flex flex-col gap-2.5 cursor-pointer transition-all duration-200 hover:shadow-[0_14px_30px_rgba(15,24,48,0.12)] hover:border-amber hover:-translate-y-0.5">
+            <div class="font-heading text-xl font-semibold text-navy">Mardan ⇌
+              Narowal</div>
+            <div class="text-sm text-sky font-semibold i18n"
+              data-en="Departs 7:45 AM · Returns 5:30 PM"
+              data-ur="روانگی صبح 7:45 · واپسی شام 5:30">Departs 7:45 AM ·
+              Returns 5:30 PM</div>
+            <div class="text-[13.5px] text-[#6B6F76] i18n"
+              data-en="Adda: Shah & Afridi Adda, Mardan"
+              data-ur="اڈہ: شاہ اینڈ آفریدی اڈہ، مردان">Adda: Shah &amp; Afridi
+              Adda, Mardan</div>
+            <span class="mt-1.5 text-sm font-semibold text-amber i18n"
+              data-en="View Full Schedule →" data-ur="مکمل شیڈول دیکھیں ←">View
+              Full Schedule →</span>
           </a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-[17px] h-[17px]"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-          </a>
-          <a href="https://wa.me/923009300113" target="_blank" class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="w-[17px] h-[17px]"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.1 16.7L2 21l4.4-1.1A8.9 8.9 0 1 0 17.6 6.3ZM12 19.4a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.6.7.7-2.5-.2-.3a7.4 7.4 0 1 1 6.2 3.3Z"/></svg>
-          </a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="w-[17px] h-[17px]"><path d="M16.6 5.8a4.3 4.3 0 0 1-3-3.8h-3v13.4a2.6 2.6 0 1 1-2-2.5v-3a5.6 5.6 0 1 0 5 5.5V9.2a7.3 7.3 0 0 0 4 1.2V7.4a4.3 4.3 0 0 1-1-1.6Z"/></svg>
+          <a href="#routes-mata"
+            class="bg-cream border border-line rounded-[10px] p-6 flex flex-col gap-2.5 cursor-pointer transition-all duration-200 hover:shadow-[0_14px_30px_rgba(15,24,48,0.12)] hover:border-amber hover:-translate-y-0.5">
+            <div class="font-heading text-xl font-semibold text-navy">Mardan ⇌
+              Mata</div>
+            <div class="text-sm text-sky font-semibold i18n"
+              data-en="Departs 7:45 AM · Returns 12:00 PM"
+              data-ur="روانگی صبح 7:45 · واپسی دوپہر 12:00">Departs 7:45 AM ·
+              Returns 12:00 PM</div>
+            <div class="text-[13.5px] text-[#6B6F76] i18n"
+              data-en="Adda: Charsadda Chowk, Mardan"
+              data-ur="اڈہ: چارسدہ چوک، مردان">PK Adda: Charsadda Chowk,
+              Mardan</div>
+            <span class="mt-1.5 text-sm font-semibold text-amber i18n"
+              data-en="View Full Schedule →" data-ur="مکمل شیڈول دیکھیں ←">View
+              Full Schedule →</span>
           </a>
         </div>
       </div>
-      <div>
-        <h6 class="text-white mb-3 i18n" data-en="Boarding Addresses" data-ur="اڈے کے پتے">Boarding Addresses</h6>
-        <div class="text-sm leading-loose">
-          <div class="mb-3">
-            <div class="text-white font-medium">Mardan ⇌ Narowal</div>
-            <div class="i18n" data-en="Shah & Afridi Adda, Mardan, KP, Pakistan" data-ur="شاہ اینڈ آفریدی اڈہ، مردان، خیبرپختونخوا، پاکستان">Shah &amp; Afridi Adda, Mardan, KP, Pakistan</div>
-          </div>
-          <div>
-            <div class="text-white font-medium">Mardan ⇌ Mata</div>
-            <div class="i18n" data-en="Charsadda Chowk, Mardan, KP, Pakistan" data-ur="چارسدہ چوک، مردان، خیبرپختونخوا، پاکستان">Charsadda Chowk, Mardan, KP, Pakistan</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h6 class="text-white mb-3 i18n" data-en="Contact" data-ur="رابطہ">Contact</h6>
-        <div class="text-sm leading-loose">
-          <div><span class="i18n" data-en="Booking WhatsApp:" data-ur="بکنگ واٹس ایپ:">Booking WhatsApp:</span> 0300-9300113</div>
-          <div><span class="i18n" data-en="MD / Owner:" data-ur="ایم ڈی / مالک:">MD / Owner:</span> 0300-9051479 · 0347-9176898</div>
-          <div><span class="i18n" data-en="Mardan → Mata Route:" data-ur="مردان ⇌ متہ روٹ:">Mardan → Mata Route:</span> 0341-9328214 · 0302-8053230</div>
-          <div><span class="i18n" data-en="Email:" data-ur="ای میل:">Email:</span> shahabrasool12@gmail.com</div>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-[#263457] pt-4.5 text-[12.5px] text-center i18n" data-en="© 2026 Haji Muslim Khan Travels. All rights reserved." data-ur="© 2026 حاجی مسلم خان ٹریولز۔ جملہ حقوق محفوظ ہیں۔">© 2026 Haji Muslim Khan Travels. All rights reserved.</div>
-  </div>
-</footer>
+    </section>
 
-<a href="https://wa.me/923009300113" target="_blank" aria-label="WhatsApp par contact karein" class="fixed bottom-[45px] right-[22px] z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_6px_18px_rgba(0,0,0,0.25)]">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.1 16.7L2 21l4.4-1.1A8.9 8.9 0 1 0 17.6 6.3ZM12 19.4a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.6.7.7-2.5-.2-.3a7.4 7.4 0 1 1 6.2 3.3Zm4-5.5c-.2-.1-1.3-.7-1.5-.7s-.4-.1-.5.1-.5.7-.6.8-.2.2-.4.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.5c-.1-.2 0-.3.1-.4l.3-.4.2-.3a.4.4 0 0 0 0-.4c-.1-.1-.5-1.2-.7-1.7s-.4-.4-.5-.4h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.4 10.3 10.3 0 0 0 4 3.5c.5.2 1 .4 1.3.5a3.2 3.2 0 0 0 1.5.1 2.5 2.5 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c-.1-.1-.2-.2-.4-.3Z"/></svg>
-</a>
+    <!-- ================= NAROWAL SCHEDULE ================= -->
+    <section class="bg-cream py-16" id="routes">
+      <div class="max-w-[1140px] mx-auto px-6">
+        <div class="max-w-[600px] mb-8">
+          <h2
+            class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n"
+            data-en="Mardan ⇌ Narowal Schedule"
+            data-ur="مردان ⇌ نارووال شیڈول">Mardan ⇌ Narowal Schedule</h2>
+          <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n"
+            data-en="Complete Mardan to Narowal schedule and return, with every major GT Road stop."
+            data-ur="مردان سے نارووال اور واپسی کا مکمل شیڈول، جی ٹی روڈ کے تمام بڑے سٹاپس کے ساتھ۔">Complete
+            Mardan to Narowal schedule and return, with every major GT Road
+            stop.</p>
+        </div>
+        <div
+          class="inline-block bg-white border border-line rounded-md px-4 py-3 text-sm text-navy font-semibold mb-7 i18n"
+          data-en="📍 Boarding Point: Shah & Afridi Adda, Mardan"
+          data-ur="📍 اڈہ: شاہ اینڈ آفریدی اڈہ، مردان">📍 Adda: Shah &amp;
+          Afridi Adda, Mardan</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+          <div class="bg-white rounded-lg overflow-hidden border border-line">
+            <div
+              class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Mardan
+              → Narowal <span class="text-amber">7:45 AM</span></div>
+            <table class="w-full border-collapse">
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Mardan</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">7:45
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Nowshera</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:15
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Akora
+                  Khattak</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:30
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Attock</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:00
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Kamra</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:15
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Hasan
+                  Abdal</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:30
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Wah
+                  Taxila</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:45
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Rawalpindi</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">10:30
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujar
+                  Khan</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">11:45
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Dina</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">12:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Jhelum</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">12:45
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Sarai
+                  Alamgir</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:00
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Kharian</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Lala
+                  Musa</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:45
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujrat</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">2:15
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Wazirabad</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">2:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Sambrial</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">3:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Daska</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">3:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Pasrur</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">4:30
+                  PM</td></tr>
+              <tr><td
+                  class="px-5 py-2.5 text-sm font-bold text-navy">Narowal</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">5:00
+                  PM</td></tr>
+            </table>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden border border-line">
+            <div
+              class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Narowal
+              → Mardan <span class="text-amber">5:30 PM</span></div>
+            <table class="w-full border-collapse">
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Narowal</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">5:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Pasrur</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">6:00
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Daska</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">6:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Sambrial</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">7:00
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Wazirabad</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">7:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujrat</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:00
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Lala
+                  Musa</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">8:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Kharian</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:00
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Sarai
+                  Alamgir</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">9:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Jhelum</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">10:00
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Dina</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">10:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Gujar
+                  Khan</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">11:00
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Rawalpindi</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">11:30
+                  PM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Wah
+                  Taxila</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">12:30
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Hasan
+                  Abdal</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:00
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Kamra</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">1:30
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Attock</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">2:00
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Akora
+                  Khattak</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">2:30
+                  AM</td></tr>
+              <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                  class="px-5 py-2.5 text-sm font-medium border-b border-line">Nowshera</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">2:45
+                  AM</td></tr>
+              <tr><td
+                  class="px-5 py-2.5 text-sm font-bold text-navy">Mardan</td><td
+                  class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">3:00
+                  AM</td></tr>
+            </table>
+          </div>
+        </div>
 
-<script>
+      </section>
+
+      <!-- ================= MATA SCHEDULE ================= -->
+      <section class="bg-white py-16" id="routes-mata">
+        <div class="max-w-[1140px] mx-auto px-6">
+          <div class="max-w-[600px] mb-8">
+            <h2
+              class="text-[26px] lg:text-[32px] font-medium text-navy font-heading">Mardan
+              ⇌ Mata</h2>
+            <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n"
+              data-en="A second daily service, with its own boarding point and contact numbers."
+              data-ur="ایک اور روزانہ سروس، اپنے الگ اڈے اور رابطہ نمبروں کے ساتھ۔">A
+              second daily service, with its own boarding point and contact
+              numbers.</p>
+          </div>
+          <div
+            class="inline-block bg-cream border border-line rounded-md px-4 py-3 text-sm text-navy font-semibold mb-7 i18n"
+            data-en="📍 Boarding Point: Charsadda Chowk, Mardan"
+            data-ur="📍 اڈہ: چارسدہ چوک، مردان">📍 Adda: Charsadda Chowk,
+            Mardan</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+            <div class="bg-white rounded-lg overflow-hidden border border-line">
+              <div
+                class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Mardan
+                → Mata <span class="text-amber">7:45 AM</span></div>
+              <table class="w-full border-collapse">
+                <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                    class="px-5 py-2.5 text-sm font-medium border-b border-line">Mardan</td><td
+                    class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">7:45
+                    AM</td></tr>
+                <tr><td
+                    class="px-5 py-2.5 text-sm font-bold text-navy">Mata</td><td
+                    class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">—</td></tr>
+              </table>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden border border-line">
+              <div
+                class="bg-navy text-white px-5 py-3.5 font-heading text-[15px] font-semibold flex justify-between items-center">Mata
+                → Mardan <span class="text-amber">12:00 PM</span></div>
+              <table class="w-full border-collapse">
+                <tr class="odd:bg-white even:bg-[#FBFAF6]"><td
+                    class="px-5 py-2.5 text-sm font-medium border-b border-line">Mata</td><td
+                    class="px-5 py-2.5 text-sm text-right font-heading text-sky font-medium border-b border-line">12:00
+                    PM</td></tr>
+                <tr><td
+                    class="px-5 py-2.5 text-sm font-bold text-navy">Mardan</td><td
+                    class="px-5 py-2.5 text-sm text-right font-heading font-bold text-amber">—</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+            <div class="bg-cream border border-line rounded-md px-3.5 py-3">
+              <div class="text-xs text-[#8B8F97] font-semibold mb-0.5 i18n"
+                data-en="Mata Route Contact" data-ur="متہ روٹ رابطہ">Mata Route
+                Contact</div>
+              <div class="font-heading text-[15px] text-navy">0341-9328214</div>
+            </div>
+            <div class="bg-cream border border-line rounded-md px-3.5 py-3">
+              <div class="text-xs text-[#8B8F97] font-semibold mb-0.5 i18n"
+                data-en="Mata Route Contact" data-ur="متہ روٹ رابطہ">Mata Route
+                Contact</div>
+              <div class="font-heading text-[15px] text-navy">0302-8053230</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FLEET / COASTER ================= -->
+      <section class="bg-cream py-16" id="vehicle">
+        <div class="max-w-[1140px] mx-auto px-6">
+          <div class="max-w-[600px] mb-8">
+            <h2
+              class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n"
+              data-en="Our Fleet" data-ur="ہمارا بیڑا">Our Fleet</h2>
+            <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n"
+              data-en="Two comfortable, clean coaches — one for each route."
+              data-ur="دو آرام دہ اور صاف ستھری کوسٹرز — ہر روٹ کے لیے ایک۔">Two
+              comfortable, clean coaches — one for each route.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg overflow-hidden border border-line">
+              <img src="./images/HajiMuslimkhantravel/coaster.png"
+                alt="Mardan to Narowal Coaster"
+                class="w-full aspect-[4/3] object-cover">
+              <div class="p-6">
+                <h3 class="text-xl text-navy mb-1 font-semibold">Mardan ⇌
+                  Narowal Coaster</h3>
+                <p class="text-[#5A5F68] text-sm mb-4 i18n"
+                  data-en="Spacious, AC coach with roof luggage rack."
+                  data-ur="کشادہ، اے سی کوسٹر روف لگیج ریک کے ساتھ۔">Spacious,
+                  AC coach with roof luggage rack.</p>
+                <ul class="list-none grid gap-2.5">
+                  <li
+                    class="flex justify-between border-b border-line pb-2 text-sm"><span
+                      class="text-[#6B6F76] i18n" data-en="Vehicle"
+                      data-ur="گاڑی">Vehicle</span><span
+                      class="font-semibold text-navy">Toyota Coaster</span></li>
+                  <li
+                    class="flex justify-between border-b border-line pb-2 text-sm"><span
+                      class="text-[#6B6F76] i18n" data-en="Boarding Point"
+                      data-ur="اڈہ">Boarding Point</span><span
+                      class="font-semibold text-navy">Shah &amp; Afridi
+                      Adda</span></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden border border-line">
+              <img
+                src="./images/HajiMuslimkhantravel/Mata/WhatsApp Image 2026-08-16 at 2.34.51 PM.jpeg"
+                alt="Mardan to Mata Coaster"
+                class="w-full aspect-[4/3] object-cover">
+              <div class="p-6">
+                <h3 class="text-xl text-navy mb-1 font-semibold">Mardan ⇌ Mata
+                  Coaster</h3>
+                <p class="text-[#5A5F68] text-sm mb-4 i18n"
+                  data-en="Toyota Coaster Superlonge with roof luggage rack."
+                  data-ur="ٹویوٹا کوسٹر سپرلانگ، روف لگیج ریک کے ساتھ۔">Toyota
+                  Coaster Superlonge with roof luggage rack.</p>
+                <ul class="list-none grid gap-2.5">
+                  <li
+                    class="flex justify-between border-b border-line pb-2 text-sm"><span
+                      class="text-[#6B6F76] i18n" data-en="Vehicle"
+                      data-ur="گاڑی">Vehicle</span><span
+                      class="font-semibold text-navy">Toyota Coaster
+                      Superlonge</span></li>
+                  <li
+                    class="flex justify-between border-b border-line pb-2 text-sm"><span
+                      class="text-[#6B6F76] i18n" data-en="Boarding Point"
+                      data-ur="اڈہ">Boarding Point</span><span
+                      class="font-semibold text-navy">Charsadda
+                      Chowk</span></li>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="bg-navy text-white py-16" id="about">
+          <div
+            class="max-w-[1140px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-12 items-center">
+            <div
+              class="rounded-[10px] overflow-hidden shadow-[0_16px_34px_rgba(0,0,0,0.35)]">
+              <img src="./images/HajiMuslimkhantravel/lala passportsize.jpeg"
+                alt="Haji Muslim Khan" class="w-full">
+            </div>
+            <div>
+              <h2
+                class="text-[26px] lg:text-[32px] font-medium text-white font-heading mb-5">Haji
+                Muslim Khan Travels</h2>
+              <div class="mb-2">
+                <p class="text-[#C7CEDD] text-[15.5px] mb-4 i18n"
+                  data-en="Haji Muslim Khan Travels offers a reliable, trusted service between Mardan, Narowal, and Mata, personally overseen by Haji Muslim Khan."
+                  data-ur="حاجی مسلم خان ٹریولز حاجی مسلم خان کی ذاتی نگرانی میں مردان، نارووال اور متہ کے درمیان قابلِ اعتماد سفر کی سہولت فراہم کرتی ہے۔">Haji
+                  Muslim Khan Travels offers a reliable, trusted service between
+                  Mardan, Narowal, and Mata, personally overseen by Haji Muslim
+                  Khan.</p>
+                <p class="text-[#C7CEDD] text-[15.5px] mb-4 i18n"
+                  data-en="Every booking is confirmed directly on WhatsApp — no agents, no extra charges."
+                  data-ur="ہر بکنگ براہ راست واٹس ایپ پر کنفرم ہوتی ہے — کوئی ایجنٹ، کوئی اضافی چارجز نہیں۔">Every
+                  booking is confirmed directly on WhatsApp — no agents, no
+                  extra charges.</p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+                <div
+                  class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
+                  <div class="text-[12.5px] text-sky font-semibold mb-1 i18n"
+                    data-en="MD / Owner — Haji Muslim Khan"
+                    data-ur="ایم ڈی / مالک — حاجی مسلم خان">MD / Owner — Haji
+                    Muslim Khan</div>
+                  <div
+                    class="font-heading text-base text-white">0300-9051479</div>
+                </div>
+                <div
+                  class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
+                  <div class="text-[12.5px] text-sky font-semibold mb-1 i18n"
+                    data-en="Owner — Alt. Number"
+                    data-ur="مالک — متبادل نمبر">Owner — Alt. Number</div>
+                  <div
+                    class="font-heading text-base text-white">0347-9176898</div>
+                </div>
+                <div
+                  class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
+                  <div class="text-[12.5px] text-sky font-semibold mb-1 i18n"
+                    data-en="Driver" data-ur="ڈرائیور">Owner</div>
+                  <div class="font-heading text-base text-white i18n"
+                    data-en="To be confirmed"
+                    data-ur="مالک — حاجی مسلم خان">Haji Muslim Khan</div>
+                </div>
+                <div
+                  class="bg-navydeep border border-[#2A3B60] rounded-md px-4 py-3.5">
+                  <div class="text-[12.5px] text-sky font-semibold mb-1 i18n"
+                    data-en="Booking WhatsApp" data-ur="بکنگ واٹس ایپ">Booking
+                    WhatsApp</div>
+                  <div
+                    class="font-heading text-base text-white">0300-9300113</div>
+                </div>
+              </div>
+              <div
+                class="bg-navydeep border-l-[3px] border-amber rounded-r-lg px-6 py-5">
+                <div
+                  class="font-heading text-[34px] leading-none text-amber mb-1">"</div>
+                <p class="text-[#DCE3F0] text-[15px] italic mb-2.5 i18n"
+                  data-en="For over the years, I have made it my personal mission to ensure every passenger who boards our coaster reaches home safely and on time. Whether you're traveling to Narowal or Mata, you're not just a passenger to us — you're a guest under my care. I personally oversee every trip because trust, once earned, must never be broken."
+                  data-ur="برسوں سے میری ذاتی کوشش رہی ہے کہ ہماری کوسٹر میں سوار ہر مسافر بحفاظت اور وقت پر گھر پہنچے۔ چاہے آپ نارووال جا رہے ہوں یا متہ، آپ ہمارے لیے صرف مسافر نہیں بلکہ میری نگرانی میں ایک مہمان ہیں۔ میں ہر سفر کی ذاتی نگرانی کرتا ہوں کیونکہ جو اعتماد ایک بار حاصل ہو جائے، اسے کبھی ٹوٹنے نہیں دینا چاہیے۔">For
+                  over the 20 years, I have made it my personal mission to
+                  ensure every passenger who boards our coaster reaches home
+                  safely and on time. Whether you're traveling to Narowal or
+                  Mata, you're not just a passenger to us — you're a guest under
+                  my care. I personally oversee every trip because trust, once
+                  earned, must never be broken.</p>
+                <div
+                  class="text-amber font-heading text-[13.5px] font-semibold">—
+                  Haji Muslim Khan</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TEAM ================= -->
+        <section class="bg-white py-16" id="team">
+          <div class="max-w-[1140px] mx-auto px-6">
+            <div class="max-w-[600px] mb-8">
+              <h2
+                class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n"
+                data-en="Our Team" data-ur="ہماری ٹیم">Our Team</h2>
+              <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n"
+                data-en="The people behind every trip — owner and route drivers."
+                data-ur="ہر سفر کے پیچھے موجود لوگ — مالک اور روٹ ڈرائیورز۔">The
+                people behind every trip — owner and route drivers.</p>
+            </div>
+            <div class="overflow-hidden">
+
+              <div id="teamTrack"
+                class="flex transition-transform duration-700 ease-in-out">
+                <!-- Team Member 1 -->
+                <div
+                  class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
+                  <!-- Added 'group' class to parent for hover targeting -->
+                  <div
+                    class="group relative rounded-lg overflow-hidden aspect-square">
+
+                    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
+                    <img
+                      src="./images/HajiMuslimkhantravel/lala passportsize.jpeg"
+                      alt="Haji Muslim Khan"
+                      class="w-full h-full object-cover object-[center_top]">
+
+                    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
+                    <div
+                      class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div
+                        class="font-heading text-lg text-white font-semibold">Haji
+                        Muslim Khan</div>
+                      <div class="text-amber text-sm font-semibold mt-1 i18n"
+                        data-en="Owner & Managing Director"
+                        data-ur="مالک اور ایم ڈی">Owner &amp; Managing
+                        Director</div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div
+                  class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
+                  <!-- Added 'group' class to parent for hover targeting -->
+                  <div
+                    class="group relative rounded-lg overflow-hidden aspect-square">
+
+                    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
+                    <img src="./images/HajiMuslimkhantravel/Murtaza.png"
+                      alt="Haji Muslim Khan"
+                      class="w-full h-full object-cover object-[center_top]">
+
+                    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
+                    <div
+                      class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div
+                        class="font-heading text-lg text-white font-semibold">Murtaza
+                        Khan</div>
+                      <div class="text-amber text-sm font-semibold mt-1 i18n"
+                        data-en="Owner & Managing Director"
+                        data-ur="مالک اور ایم ڈی">Murtaza </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div
+                  class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
+                  <!-- Added 'group' class to parent for hover targeting -->
+                  <div
+                    class="group relative rounded-lg overflow-hidden aspect-square">
+
+                    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
+                    <img src="./images/HajiMuslimkhantravel/Mata/Khan.png"
+                      alt="Haji Muslim Khan"
+                      class="w-full h-full object-cover object-[center_top]">
+
+                    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
+                    <div
+                      class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div
+                        class="font-heading text-lg text-white font-semibold">
+                        Khan</div>
+                      <div class="text-amber text-sm font-semibold mt-1 i18n"
+                        data-en="Owner & Managing Director"
+                        data-ur="مالک اور ایم ڈی">Driver &amp; Mardan To
+                        Matta</div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div
+                  class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
+                  <!-- Added 'group' class to parent for hover targeting -->
+                  <div
+                    class="group relative rounded-lg overflow-hidden aspect-square">
+
+                    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
+                    <img src="./images/HajiMuslimkhantravel/Mata/Waris Khan.png"
+                      alt="Haji Muslim Khan"
+                      class="w-full h-full object-cover object-[center_top]">
+
+                    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
+                    <div
+                      class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div
+                        class="font-heading text-lg text-white font-semibold">Waris
+                        Khan</div>
+                      <div class="text-amber text-sm font-semibold mt-1 i18n"
+                        data-en="Owner & Managing Director"
+                        data-ur="مالک اور ایم ڈی">Mata &amp; Mardan</div>
+                    </div>
+
+                  </div>
+                </div>
+
+                   <!-- Team Member 5 -->
+                <div
+                  class="team-slide-item shrink-0 w-full md:w-1/2 xl:w-1/3 px-3">
+                  <!-- Added 'group' class to parent for hover targeting -->
+                  <div
+                    class="group relative rounded-lg overflow-hidden aspect-square">
+
+                    <!-- Changed object-cover to object-[center_top] so the image aligns from the top -->
+                    <img src="./images/HajiMuslimkhantravel/Hayam.jpeg"
+                      alt="Haji Muslim Khan"
+                      class="w-full h-full object-cover object-[center_top]">
+
+                    <!-- Added opacity-0 group-hover:opacity-100 and transition for hover effect -->
+                    <div
+                      class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navydeep/95 to-transparent px-5 pt-14 pb-5 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div
+                        class="font-heading text-lg text-white font-semibold">Hayam Muslim</div>
+                      <div class="text-amber text-sm font-semibold mt-1 i18n"
+                        data-en="Owner & Managing Director"
+                        data-ur="مالک اور ایم ڈی">Hayam Muslim</div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- End Team Member -->
+              </div>
+              <div id="teamDots" class="flex justify-center gap-1.5 mt-5"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= BOOKING ================= -->
+        <section class="bg-cream py-16" id="booking">
+          <div class="max-w-[1140px] mx-auto px-6">
+            <div class="max-w-[600px] mx-auto mb-8 text-center">
+              <h2
+                class="text-[26px] lg:text-[32px] font-medium text-navy font-heading i18n"
+                data-en="Book Your Seat" data-ur="اپنی سیٹ بک کریں">Book Your
+                Seat</h2>
+              <p class="text-[#5A5F68] mt-2.5 text-[15.5px] i18n"
+                data-en="Fill the form — a ready WhatsApp message will open directly."
+                data-ur="فارم بھریں — تفصیلات کے ساتھ سیدھا واٹس ایپ میسج کھل جائے گا۔">Fill
+                the form — a ready WhatsApp message will open directly.</p>
+            </div>
+            <div
+              class="bg-white border border-line rounded-[10px] p-9 max-w-[640px] mx-auto">
+              <h3 class="text-xl text-navy mb-1.5 font-semibold i18n"
+                data-en="Booking Details" data-ur="بکنگ کی تفصیلات">Booking
+                Details</h3>
+              <p class="text-[#6B6F76] text-sm mb-6 i18n"
+                data-en="Submitting opens WhatsApp with a ready-made message."
+                data-ur="سبمٹ کرتے ہی واٹس ایپ تیار شدہ میسج کے ساتھ کھل جائے گا۔">Submitting
+                opens WhatsApp with a ready-made message.</p>
+              <form id="bookingForm">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name"
+                      class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n"
+                      data-en="Full Name" data-ur="پورا نام">Full Name</label>
+                    <input type="text" id="name" required
+                      placeholder="Your name"
+                      class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
+                  </div>
+                  <div>
+                    <label for="phone"
+                      class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n"
+                      data-en="Phone Number" data-ur="فون نمبر">Phone
+                      Number</label>
+                    <input type="tel" id="phone" required
+                      placeholder="03XX-XXXXXXX"
+                      class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
+                  </div>
+                  <div>
+                    <label for="from"
+                      class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n"
+                      data-en="From" data-ur="از">From</label>
+                    <select id="from"
+                      class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
+                      <option>Mardan</option>
+                      <option>Narowal</option>
+                      <option>Mata</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="to"
+                      class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n"
+                      data-en="To" data-ur="تک">To</label>
+                    <select id="to"
+                      class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
+                      <option>Narowal</option>
+                      <option>Mata</option>
+                      <option>Mardan</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="date"
+                      class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n"
+                      data-en="Travel Date" data-ur="سفر کی تاریخ">Travel
+                      Date</label>
+                    <input type="date" id="date"
+                      class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
+                  </div>
+                  <div>
+                    <label for="seats"
+                      class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n"
+                      data-en="Seats" data-ur="نشستیں">Seats</label>
+                    <input type="number" id="seats" min="1" value="1"
+                      class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-sky">
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="message"
+                      class="block text-[13.5px] font-semibold text-navy mb-1.5 i18n"
+                      data-en="Extra Note (optional)"
+                      data-ur="اضافی نوٹ (اختیاری)">Extra Note
+                      (optional)</label>
+                    <textarea id="message"
+                      placeholder="Boarding point, luggage, or any other detail"
+                      class="w-full px-3.5 py-2.5 border border-line rounded-md text-[14.5px] bg-white text-ink min-h-[70px] resize-y focus:outline-none focus:ring-2 focus:ring-sky"></textarea>
+                  </div>
+                </div>
+                <button type="submit"
+                  class="w-full justify-center mt-4 text-base px-6 py-3.5 rounded font-semibold bg-amber hover:bg-[#c9943c] text-navydeep flex items-center gap-2 i18n"
+                  data-en="Book on WhatsApp" data-ur="واٹس ایپ پر بک کریں">Book
+                  on WhatsApp</button>
+              </form>
+              <div class="text-[12.5px] text-[#8B8F97] mt-3 text-center i18n"
+                data-en="Your message will go directly to 0300-9300113 on WhatsApp."
+                data-ur="آپ کا میسج براہ راست 0300-9300113 پر واٹس ایپ کے ذریعے جائے گا۔">Your
+                message will go directly to 0300-9300113 on WhatsApp.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="bg-navydeep text-[#8EA3C4] pt-10 pb-7">
+          <div class="max-w-[1140px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+              <div>
+                <div
+                  class="flex items-center gap-2.5 font-heading text-[18px] font-semibold whitespace-nowrap">
+                  <img src="./logocoaster.png" alt="Haji Muslim Khan Travels"
+                    class="w-9 h-9 flex-shrink-0">
+                  Haji Muslim Khan Travels
+                </div> <p class="text-[13.5px] max-w-[280px] i18n"
+                  data-en="Daily services from Mardan to Narowal and Mardan to Mata."
+                  data-ur="روزانہ سروسز: مردان سے نارووال اور مردان سے متہ۔">Daily
+                  services from Mardan to Narowal and Mardan to Mata.</p>
+                <div class="flex gap-2.5 mt-4">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61586655008805"
+                    class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center"
+                    aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor"
+                      class="w-[17px] h-[17px]"><path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z" /></svg>
+                  </a>
+                  <a href="#"
+                    class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="1.8" class="w-[17px] h-[17px]"><rect x="3"
+                        y="3" width="18" height="18" rx="5" /><circle cx="12"
+                        cy="12" r="4" /><circle cx="17.2" cy="6.8"
+                        r="1" /></svg>
+                  </a>
+                  <a href="https://wa.me/923009300113" target="_blank"
+                    class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center"
+                    aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"
+                      class="w-[17px] h-[17px]"><path
+                        d="M17.6 6.3A8.9 8.9 0 0 0 3.1 16.7L2 21l4.4-1.1A8.9 8.9 0 1 0 17.6 6.3ZM12 19.4a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.6.7.7-2.5-.2-.3a7.4 7.4 0 1 1 6.2 3.3Z" /></svg>
+                  </a>
+                  <a href="#"
+                    class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-amber hover:text-navydeep text-white flex items-center justify-center"
+                    aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="currentColor"
+                      class="w-[17px] h-[17px]"><path
+                        d="M16.6 5.8a4.3 4.3 0 0 1-3-3.8h-3v13.4a2.6 2.6 0 1 1-2-2.5v-3a5.6 5.6 0 1 0 5 5.5V9.2a7.3 7.3 0 0 0 4 1.2V7.4a4.3 4.3 0 0 1-1-1.6Z" /></svg>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h6 class="text-white mb-3 i18n" data-en="Boarding Addresses"
+                  data-ur="اڈے کے پتے">Boarding Addresses</h6>
+                <div class="text-sm leading-loose">
+                  <div class="mb-3">
+                    <div class="text-white font-medium">Mardan ⇌ Narowal</div>
+                    <div class="i18n"
+                      data-en="Shah & Afridi Adda, Mardan, KP, Pakistan"
+                      data-ur="شاہ اینڈ آفریدی اڈہ، مردان، خیبرپختونخوا، پاکستان">Shah
+                      &amp; Afridi Adda, Mardan, KP, Pakistan</div>
+                  </div>
+                  <div>
+                    <div class="text-white font-medium">Mardan ⇌ Mata</div>
+                    <div class="i18n"
+                      data-en="Charsadda Chowk, Mardan, KP, Pakistan"
+                      data-ur="چارسدہ چوک، مردان، خیبرپختونخوا، پاکستان">Charsadda
+                      Chowk, Mardan, KP, Pakistan</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h6 class="text-white mb-3 i18n" data-en="Contact"
+                  data-ur="رابطہ">Contact</h6>
+                <div class="text-sm leading-loose">
+                  <div><span class="i18n" data-en="Booking WhatsApp:"
+                      data-ur="بکنگ واٹس ایپ:">Booking WhatsApp:</span>
+                    0300-9300113</div>
+                  <div><span class="i18n" data-en="MD / Owner:"
+                      data-ur="ایم ڈی / مالک:">MD / Owner:</span> 0300-9051479 ·
+                    0347-9176898</div>
+                  <div><span class="i18n" data-en="Mardan → Mata Route:"
+                      data-ur="مردان ⇌ متہ روٹ:">Mardan → Mata Route:</span>
+                    0341-9328214 · 0302-8053230</div>
+                  <div><span class="i18n" data-en="Email:"
+                      data-ur="ای میل:">Email:</span>
+                    shahabrasool12@gmail.com</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border-t border-[#263457] pt-4.5 text-[12.5px] text-center i18n"
+              data-en="© 2026 Haji Muslim Khan Travels. All rights reserved."
+              data-ur="© 2026 حاجی مسلم خان ٹریولز۔ جملہ حقوق محفوظ ہیں۔">© 2026
+              Haji Muslim Khan Travels. All rights reserved.</div>
+          </div>
+        </footer>
+
+        <a href="https://wa.me/923009300113" target="_blank"
+          aria-label="WhatsApp par contact karein"
+          class="fixed bottom-[45px] right-[22px] z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_6px_18px_rgba(0,0,0,0.25)]">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path
+              d="M17.6 6.3A8.9 8.9 0 0 0 3.1 16.7L2 21l4.4-1.1A8.9 8.9 0 1 0 17.6 6.3ZM12 19.4a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.6.7.7-2.5-.2-.3a7.4 7.4 0 1 1 6.2 3.3Zm4-5.5c-.2-.1-1.3-.7-1.5-.7s-.4-.1-.5.1-.5.7-.6.8-.2.2-.4.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.5c-.1-.2 0-.3.1-.4l.3-.4.2-.3a.4.4 0 0 0 0-.4c-.1-.1-.5-1.2-.7-1.7s-.4-.4-.5-.4h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.4 10.3 10.3 0 0 0 4 3.5c.5.2 1 .4 1.3.5a3.2 3.2 0 0 0 1.5.1 2.5 2.5 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c-.1-.1-.2-.2-.4-.3Z" /></svg>
+        </a>
+
+        <script>
 /* ---- Hero slider ---- */
 (function(){
   const slides = document.querySelectorAll('#heroSlider .hero-slide');
@@ -758,5 +1351,5 @@ document.getElementById('bookingForm').addEventListener('submit', function(e){
 });
 </script>
 
-</body>
-</html>
+      </body>
+    </html>
