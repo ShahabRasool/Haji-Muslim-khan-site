@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B2C4F"/>
+      <stop offset="100%" stop-color="#0F1830"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#badgeGrad2)" stroke="#D9A441" stroke-width="3"/>
+  <circle cx="60" cy="60" r="47" fill="none" stroke="#D9A441" stroke-width="1" opacity="0.5"/>
+  <g transform="translate(21,46)">
+    <rect x="0" y="10" width="78" height="25" rx="7" fill="#F5F2EA"/>
+    <rect x="6" y="15" width="13" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="23" y="15" width="13" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="40" y="15" width="13" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="57" y="15" width="13" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="0" y="7" width="78" height="4" rx="2" fill="#D9A441"/>
+    <circle cx="16" cy="37" r="6.5" fill="#0F1830"/>
+    <circle cx="16" cy="37" r="2.3" fill="#D9A441"/>
+    <circle cx="62" cy="37" r="6.5" fill="#0F1830"/>
+    <circle cx="62" cy="37" r="2.3" fill="#D9A441"/>
+  </g>
+</svg>

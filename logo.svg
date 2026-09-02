@@ -1,0 +1,31 @@
+<svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B2C4F"/>
+      <stop offset="100%" stop-color="#0F1830"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Badge -->
+  <circle cx="60" cy="60" r="52" fill="url(#badgeGrad)" stroke="#D9A441" stroke-width="3"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#D9A441" stroke-width="1" opacity="0.5"/>
+
+  <!-- Simple coach silhouette -->
+  <g transform="translate(23,44)">
+    <rect x="0" y="10" width="74" height="24" rx="7" fill="#F5F2EA"/>
+    <rect x="6" y="15" width="12" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="22" y="15" width="12" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="38" y="15" width="12" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="54" y="15" width="12" height="9" rx="1.5" fill="#16233F"/>
+    <rect x="0" y="7" width="74" height="4" rx="2" fill="#D9A441"/>
+    <circle cx="15" cy="36" r="6" fill="#0F1830"/>
+    <circle cx="15" cy="36" r="2.2" fill="#D9A441"/>
+    <circle cx="59" cy="36" r="6" fill="#0F1830"/>
+    <circle cx="59" cy="36" r="2.2" fill="#D9A441"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="132" y="52" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="700" fill="#16233F">HAJI MUSLIM KHAN</text>
+  <text x="132" y="80" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="700" fill="#D9A441" letter-spacing="2">TRAVELS</text>
+  <text x="133" y="98" font-family="'Open Sans', Arial, sans-serif" font-size="12" font-weight="500" fill="#5B93BE" letter-spacing="0.5">MARDAN &#8226; NAROWAL &#8226; MATA</text>
+</svg>
